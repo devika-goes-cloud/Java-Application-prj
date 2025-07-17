@@ -1,14 +1,13 @@
-FROM openjdk:17.0.2
+FROM maven:3.9.6-eclipse-temurin-17-alpine
 
-# Install Maven
-RUN apt-get update && apt-get install -y maven
-
-# Copy project
-COPY . /usr/src/myapp
+# Set working directory
 WORKDIR /usr/src/myapp
 
-# Package the WAR
+# Copy project files
+COPY . .
+
+# Package the WAR without running tests
 RUN mvn clean package -DskipTests
 
-# Run app using Jetty profile (you can replace 'jetty' with any other valid one like 'tomee80')
+# Run the app using cargo plugin with jetty profile (make sure it exists)
 CMD ["mvn", "cargo:run", "-P", "jetty"]
