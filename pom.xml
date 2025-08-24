@@ -350,6 +350,9 @@
 
     <!-- Reproducible Builds -->
     <project.build.outputTimestamp>1670877034</project.build.outputTimestamp>
+	<sonar.coverage.jacoco.xmlReportPaths>
+        target/site/jacoco/jacoco.xml
+    </sonar.coverage.jacoco.xmlReportPaths>
   </properties>
 
   <profiles>
