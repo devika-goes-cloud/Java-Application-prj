@@ -433,10 +433,4 @@
         <cargo.maven.containerUrl>https://repo.maven.apache.org/maven2/org/glassfish/main/distributions/glassfish/${glassfish.version}/glassfish-${glassfish.version}.zip</cargo.maven.containerUrl>
       </properties>
     </profile>
-    <profile>
-      <id>glassfish4</id>
-      <properties>
-        <glassfish.major-version>4</glassfish.major-version>
-        <glassfish.version>4.1.2</glassfish.version>
-        <cargo.maven.containerId>glassfish${glassfish.major-version}x</cargo.maven.containerId>
-        <cargo.maven.containerUrl>https://download.java.net/glassfish/${glassfish.version}/release/glassfish-${glassfish.version
+
